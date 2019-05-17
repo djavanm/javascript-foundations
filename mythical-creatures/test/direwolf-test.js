@@ -4,40 +4,40 @@ const Stark = require('../exercises/stark');
 
 describe('Direwolf', () => {
 
-  it.skip('should be a function', () => {
+  it('should be a function', () => {
     assert.isFunction(Direwolf);
   });
 
-  it.skip('should instantiate our good friend, Direwolf', () => {
+  it('should instantiate our good friend, Direwolf', () => {
     const direwolf = new Direwolf();
     assert.isObject(direwolf);
   });
 
-  it.skip('should have a name', () => {
+  it('should have a name', () => {
     const direwolf = new Direwolf('Nymeria');
     assert.equal(direwolf.name, 'Nymeria');
   });
 
-  it.skip('should have a default home of Beyond the Wall', () => {
+  it('should have a default home of Beyond the Wall', () => {
     const direwolf = new Direwolf('Lady');
 
     assert.equal(direwolf.name, 'Lady');
     assert.equal(direwolf.home, 'Beyond the Wall');
   });
 
-  it.skip('should be able to have other homes', () => {
+  it('should be able to have other homes', () => {
     const direwolf = new Direwolf('Ghost', 'Winterfell');
 
     assert.equal(direwolf.home, 'Winterfell');
   });
 
-  it.skip('should have a default size of massive', () => {
+  it('should have a default size of massive', () => {
     const direwolf = new Direwolf('Ghost');
 
     assert.equal(direwolf.size, 'Massive');
   });
 
-  it.skip('should be able to have another size', () => {
+  it('should be able to have another size', () => {
     const direwolf = new Direwolf('Shaggydog', 'Karhold', 'Smol Pupper');
 
     assert.equal(direwolf.name, 'Shaggydog');
@@ -45,13 +45,13 @@ describe('Direwolf', () => {
     assert.equal(direwolf.size, 'Smol Pupper');
   });
 
-  it.skip('should instantiate our good friend, Stark', () => {
+  it('should instantiate our good friend, Stark', () => {
     const stark = new Stark();
 
     assert.isObject(stark);
   });
 
-  it.skip('should have a name', () => {
+  it('should have a name', () => {
     const stark = new Stark('Bran');
 
     assert.equal(stark.name, 'Bran');
