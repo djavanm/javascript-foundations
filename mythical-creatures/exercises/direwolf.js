@@ -7,8 +7,9 @@ class Direwolf {
       this.home = 'Beyond the Wall';
     if (this.size == undefined) {
       this.size = 'Massive';
+    this.starksToProtect = [];
     }
-    }
+  }
  }
 }
 module.exports = Direwolf;
