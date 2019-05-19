@@ -4,7 +4,7 @@ class Direwolf {
     this.home = home;
     this.size = size;
     this.starksToProtect = [];
-    this.location = 'King\'s Landing'
+    this.huntsWhiteWalkers = true;
     if(this.home == undefined) {
       this.home = 'Beyond the Wall';
     if (this.size == undefined) {
@@ -13,8 +13,20 @@ class Direwolf {
   }
  }
  protect(stark) {
-  this.starksToProtect.push(stark);
-  this.location = (stark[location]);
+   this.huntsWhiteWalkers = false;
+   stark.safe = true;
+   if (this.starksToProtect.length == 2) {
+     return
+   } else if(this.home === stark.location) {
+    this.starksToProtect.push(stark)
+   } else {
+     return
+   }
+ }
+ leave(stark) {
+   this.starksToProtect[0].safe = false;
+   this.starksToProtect = [];
+   this.huntsWhiteWalkers = true;
  }
 }
 module.exports = Direwolf;

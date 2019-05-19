@@ -12,7 +12,6 @@ class Medusa {
  	} else {
  		this.statues.push(victim);
  	}
- 	
  	console.log(this.statues)
  }
 }
