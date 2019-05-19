@@ -1,8 +1,8 @@
 class Wizard {
-  constructor(wizard) {
-  	this.name = wizard.name;
+  constructor(object) {
+  	this.name = object.name;
   	this.bearded = true;
-  	if(wizard.bearded === false) {
+  	if(object.bearded === false) {
   		this.bearded = false;
   	}
   	this.isRested = true;

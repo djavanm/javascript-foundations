@@ -1,7 +1,9 @@
 class Stark {
-  constructor(name) {
+  constructor(name, location) {
     this.name = name;
-    this.location = 'Winterfell'
+    this.location = location;
+    if(this.location === undefined)
+    this.location = 'Winterfell';
  }
 }
 module.exports = Stark;

@@ -73,7 +73,7 @@ describe('Direwolf', () => {
     assert.equal(stark.location, 'Winterfell');
   });
 
-  it.skip('should be able to protect a Stark', () => {
+  it('should be able to protect a Stark', () => {
     const direwolf = new Direwolf('Nymeria', 'Riverlands');
     const stark = new Stark('Arya', 'Riverlands');
 
@@ -84,7 +84,7 @@ describe('Direwolf', () => {
     assert.equal(direwolf.starksToProtect[0].name, 'Arya');
   });
 
-  it.skip('should only be able to protect a Stark if direwolf and Stark locations match', () => {
+  it('should only be able to protect a Stark if direwolf and Stark locations match', () => {
     const direwolf = new Direwolf('Ghost');
     const stark = new Stark('John', 'King\'s Landing');
 
