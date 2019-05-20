@@ -4,6 +4,7 @@ class Fairy {
     this.dust = 10;
     this.clothes = {dresses: ['Iris']};
     this.disposition = 'Good natured';
+    this.humanWards = [];
  }
  receiveBelief() {
    this.dust += 1;
@@ -12,16 +13,20 @@ class Fairy {
    this.dust += 10;
  }
  makeDresses(array) {
-   for(this.i = 0; this.i < array.length; this.i++) {
-     this.clothes.dresses.push(array[this.i]);
-   }
+  this.clothes.dresses = this.clothes.dresses.concat(array);
  }
  provoke() {
    this.disposition = 'Vengeful';
  }
 replaceInfant(object) {
-if (this.disposition == 'Vengeful') { 
+if (this.disposition === 'Vengeful') { 
+  this.humanWards.push(object);
   object.disposition = 'Malicious';
+}
+if(this.humanWards.length > 2) {
+  this.disposition = 'Good natured';
+} else {
+  return object;
 }
 }
 }
