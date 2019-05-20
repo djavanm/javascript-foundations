@@ -34,7 +34,7 @@ class Centaur {
  }
 
  sleep() {
- 	if(this.standing == true) {
+ 	if(this.standing) {
  		return 'NO!';
  	}
  	if(this.layingDown == true) {

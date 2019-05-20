@@ -2,7 +2,8 @@ class Fairy {
   constructor(name) {
     this.name = name;
     this.dust = 10;
-    this.clothes = {dresses: ['Iris', ]};
+    this.clothes = {dresses: ['Iris']};
+    this.disposition = 'Good natured';
  }
  receiveBelief() {
    this.dust += 1;
@@ -11,8 +12,18 @@ class Fairy {
    this.dust += 10;
  }
  makeDresses(array) {
-   this.clothes.dresses.push(array);
+   for(this.i = 0; this.i < array.length; this.i++) {
+     this.clothes.dresses.push(array[this.i]);
+   }
  }
+ provoke() {
+   this.disposition = 'Vengeful';
+ }
+replaceInfant(object) {
+if (this.disposition == 'Vengeful') { 
+  object.disposition = 'Malicious';
+}
+}
 }
 module.exports = Fairy;
 
