@@ -1,11 +1,11 @@
 class Wizard {
   constructor(object) {
 	this.name = object.name;
-	this.bearded = true;
+	this.bearded = object.bearded;
+	this.bearded 
 	this.isRested = true;
 	this.spellCasts = 3;
-	if(object.bearded === false) {
-	this.bearded = false;		
+		
 	}	  
 }
 incantation(message) {
