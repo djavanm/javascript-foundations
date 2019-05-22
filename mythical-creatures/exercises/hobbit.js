@@ -10,8 +10,8 @@ class Hobbit {
     }
     celebrateBirthday() {
         this.age++;
-        this.age > 32 ? this.adult = true : this.adult = false;
-        this.age > 100 ? this.old = true : this.old = false;
+        this.adult = this.age > 32;
+        this.old = this.age > 100;
     }
 }
 module.exports = Hobbit;
