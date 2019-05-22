@@ -8,11 +8,9 @@ class Dragon {
 	}
 
 	eat() {
-		this.counter = this.counter + 1;
-		if(this.counter === 3) {
-			this.hungry = false;
-		} 
-	}
+		this.counter++;
+		this.counter == 3 ? this.hungry = false : this.hungry = true;
+	} 
 }
 
 module.exports = Dragon;
